@@ -1,3 +1,5 @@
+#using floating point numbers
+
 #What is the length of a piece of ribbon that one student gets when a ribbon of 19cm is divided among 5 students?
 
 #fractions truncated

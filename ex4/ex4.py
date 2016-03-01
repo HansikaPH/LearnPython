@@ -1,3 +1,5 @@
+#using variables
+
 #assigning value 100 to the variable cars
 cars = 100
 
