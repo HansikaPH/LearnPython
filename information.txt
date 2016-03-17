@@ -1,0 +1,105 @@
+Python is an object oriented programming language
+
+Open a terminal and enter 'python' to enter python shell on the terminal.
+Now you can use python commands such as open, read as you would use them on a python script. Likewise you can type in any Python code. 
+Enter quit() when you want to exit the python shell and return to the normal terminal. 
+
+
+On the terminal you can use echo command to create a new file and store content into it.
+ echo "This is a test file." > test.txt
+Then use the cat command display the content of the file.
+ cat test.txt
+
+
+Declaring a function:
+Did you start your function definition with def?
+Does your function name have only characters and _ (underscore) characters?
+Did you put an open parenthesis ( right after the function name?
+Did you put your arguments after the parenthesis ( separated by commas?
+Did you make each argument unique (meaning no duplicated names)?
+Did you put a close parenthesis and a colon ): after the arguments?
+Did you indent all lines of code you want in the function four spaces? No more, no less.
+Did you "end" your function by going back to writing with no indent (dedenting we call it)?
+
+Calling a function:
+Did you call/use/run this function by typing its name?
+Did you put the ( character after the name to run it?
+Did you put the values you want into the parenthesis separated by commas?
+Did you end the function call with a ) character?
+
+Read function for files:
+At the start, it points to the beginning of the file. But as it finishes reading, it points to the end of the file. If you call read again on the same file object it prints nothing.
+
+Seek function for files:
+When you open a file, the system points to the beginning of the file. Any read or write you do will happen from the beginning. A seek() operation moves that pointer to some other part of the file so you can read or write at that place.
+So, if you want to read the whole file but skip the first 20 bytes, open the file, seek(20) to move to where you want to start reading, then continue with reading the file.
+
+Conditions:
+To check if a number is in a range use either 0 < x < 10 or x in range(1, 10).
+
+Rules for If-Statements:
+Every if-statement must have an else.
+If this else should never run because it doesn't make sense, then you must use a die function in the else that prints out an error message and dies, just like we did in the last exercise. This will find many errors.
+Never nest if-statements more than two deep and always try to do them one deep.
+Treat if-statements like paragraphs, where each if-elif-else grouping is like a set of sentences. Put blank lines before and after.
+Your boolean tests should be simple. If they are complex, move their calculations to variables earlier in your function and use a good name for the variable.
+
+Making two dimensional lists in Python:
+[[1,2,3],[4,5,6]]
+
+In python, if you end a statement with a colon(:) that means that following it is a block of code. The block of code is denoted with the proper indentation of four spaces.
+
+Rules for Loops:
+Use a while-loop only to loop forever, and that means probably never. This only applies to Python; other languages are different.
+Use a for-loop for all other kinds of looping, especially if there is a fixed or limited number of things to loop over.
+Python does not specifically has the concept of arrays. It is list that Python has. 
+
+Logic:
+Python uses and, or, not instead of &&, || in Java
+
+Tips for Debugging:
+Do not use a "debugger." A debugger is like doing a full-body scan on a sick person. You do not get any specific useful information, and you find a whole lot of information that doesn't help and is just confusing.
+The best way to debug a program is to use print to print out the values of variables at points in the program to see where they go wrong.
+Make sure parts of your programs work as you work on them. Do not write massive files of code before you try to run them. Code a little, run a little, fix a little.
+
+When to Use Lists:
+If you need to maintain order. Remember, this is listed order, not sorted order. Lists do not sort for you.
+If you need to access the contents randomly by a number. Remember, this is using cardinal numbers starting at 0.
+If you need to go through the contents linearly (first to last). Remember, that's what for-loops are for.
+
+A module in python:
+A Python file with some functions or variables in it ..
+You import that file.
+And you can access the functions or variables in that module with the . (dot) operator.
+
+Class vs module:
+A class is a way to take a grouping of functions and data and place them inside a container so you can access them with the . (dot) operator. A class is similar to a module.Here's why classes are used instead of modules: You can take this MyStuff class and use it to craft many of them, millions at a time if you want, and each one won't interfere with each other. When you import a module there is only one for the entire program unless you do some monster hacks.
+If a class is like a "mini-module," then there has to be a similar concept to import but for classes. That concept is called "instantiate", which is just a fancy, obnoxious, overly smart way to say "create." When you instantiate a class what you get is called an object.
+
+Process of object instantiation:
+Python looks for MyStuff() and sees that it is a class you've defined.
+Python crafts an empty object with all the functions you've specified in the class using def.
+Python then looks to see if you made a "magic" __init__ function, and if you have it calls that function to initialize your newly created empty object.
+In the MyStuff function __init__ I then get this extra variable self, which is that empty object Python made for me, and I can set variables on it just like you would with a module, dictionary, or other object.
+In this case, I set self.tangerine to a song lyric and then I've initialized this object.
+Now Python can take this newly minted object and assign it to the thing variable for me to work with.
+
+This is what really happens at object instantiation:
+Classes are like blueprints or definitions for creating new mini-modules.
+Instantiation is how you make one of these mini-modules and import it at the same time. "Instantiate" just means to create an object from the class.
+The resulting created mini-module is called an object and you then assign it to a variable to work with it.
+
+In Python, a class inherits from the class named object to make a class but it's not an object really it's a class, but do not forget to inherit from object.
+
+Metaclass is the class of a class. Like a class defines how an instance of the class behaves, a metaclass defines how a class behaves. A class is an instance of a metaclass.
+
+class X(Y) - "Make a class named X that is-a Y."
+
+has-many relationship in python is demonstrated by having a list or a dictionary. is-many relationship is demonstrated by having multiple inheritance. But multiple inheritance needs to be avoided. 
+
+In the case of multiple inheritance, whenever you have implicit actions on any child instance, Python has to look-up the possible function in the class hierarchy for all the parent classes, but it needs to do this in a consistent order. To do this Python uses "method resolution order" (MRO) and an algorithm called C3 to get it straight. Because the MRO is complex and a well-defined algorithm is used, Python can't leave it to you to get the MRO right. Instead, Python gives you the super() function, which handles all of this for you in the places that you need the altering type of actions
+
+If both inheritance and composition solve the problem of reuse, then which one is appropriate in which situations? The answer is incredibly subjective, but I'll give you my three guidelines for when to do which:
+Avoid multiple inheritance at all costs, as it's too complex to be reliable. If you're stuck with it, then be prepared to know the class hierarchy and spend time finding where everything is coming from.
+Use composition to package code into modules that are used in many different unrelated places and situations.
+Use inheritance only when there are clearly related reusable pieces of code that fit under a single common concept or if you have to because of something you're using.

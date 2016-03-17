@@ -2,7 +2,7 @@
 print "I will now count my chickens:"
 
 
-#can print several arguments using one print function and a comma between the arguments 
+#can print several arguments using one print function and a comma between the arguments. the comma will add a space in between the words as well
 #do the division first(30/6=5) and then perform the addition(25+5=30) 
 print "Hens", 25 + 30 / 6
 
