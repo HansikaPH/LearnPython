@@ -118,5 +118,7 @@ There are two related concepts, both called "keyword arguments":
 On the calling side, you have the ability to specify some function arguments by name. You have to mention them after all of the arguments without names (positional arguments), and there must be default values for any parameters which were not mentioned at all.
 
 The other concept is on the function definition side:
-You can define a function that takes parameters by name -- and you don't even have to specify what those names are. These are pure keyword arguments, and can't be passed positionally. The syntax is def my_function(arg1, arg2, **kwargs)
+You can define a function that takes parameters by name -- and you don't even have to specify what those names are. These are pure keyword arguments, and can't be passed positionally. The syntax is
+
+def my_function(arg1, arg2, **kwargs)
 Any keyword arguments you pass into this function will be placed into a dictionary named kwargs. 
